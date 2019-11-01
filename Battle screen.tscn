@@ -1,0 +1,162 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Battle screen.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Battle.tscn" type="PackedScene" id=3]
+
+[node name="Battle screen" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer"]
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer"]
+margin_left = 107.0
+margin_top = 32.0
+margin_right = 533.0
+margin_bottom = 327.0
+custom_constants/separation = 12
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+editor/display_folded = true
+margin_right = 426.0
+margin_bottom = 32.0
+
+[node name="Enemy Health" type="ProgressBar" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 211.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/Enemy Health"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+editor/display_folded = true
+margin_left = 215.0
+margin_right = 426.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="Player health" type="ProgressBar" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 211.0
+margin_bottom = 14.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 211.0
+margin_bottom = 32.0
+custom_constants/margin_left = 20
+
+[node name="focus points" type="ProgressBar" parent="Control/MarginContainer/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+margin_left = 20.0
+margin_right = 211.0
+margin_bottom = 14.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 44.0
+margin_right = 426.0
+margin_bottom = 263.0
+custom_constants/separation = 135
+
+[node name="Enemy" type="CenterContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+margin_right = 426.0
+margin_bottom = 64.0
+
+[node name="Enemy" type="TextureRect" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Enemy"]
+margin_left = 181.0
+margin_right = 245.0
+margin_bottom = 64.0
+texture = ExtResource( 2 )
+
+[node name="Menu" type="VBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+margin_top = 199.0
+margin_right = 426.0
+margin_bottom = 219.0
+custom_constants/separation = -20
+
+[node name="Atack_comands" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu"]
+editor/display_folded = true
+margin_right = 426.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 426, 20 )
+size_flags_horizontal = 3
+
+[node name="Gun" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands"]
+visible = false
+margin_right = 38.0
+margin_bottom = 20.0
+text = "Gun"
+
+[node name="Knive" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands"]
+visible = false
+margin_left = 42.0
+margin_right = 89.0
+margin_bottom = 20.0
+text = "Knive"
+
+[node name="Main Buttons" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu"]
+editor/display_folded = true
+margin_right = 426.0
+margin_bottom = 20.0
+custom_constants/separation = 39
+
+[node name="Atack_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons"]
+margin_right = 52.0
+margin_bottom = 20.0
+text = "Attack"
+
+[node name="Utilities_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons"]
+margin_left = 91.0
+margin_right = 154.0
+margin_bottom = 20.0
+text = "Utilities"
+
+[node name="Enchant_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons"]
+margin_left = 193.0
+margin_right = 255.0
+margin_bottom = 20.0
+text = "Enchant"
+
+[node name="Health_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons"]
+margin_left = 294.0
+margin_right = 348.0
+margin_bottom = 20.0
+text = "Health"
+
+[node name="Flee_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons"]
+margin_left = 387.0
+margin_right = 426.0
+margin_bottom = 20.0
+text = "Flee"
+
+[node name="Back" type="HBoxContainer" parent="Control/MarginContainer/CenterContainer/VBoxContainer"]
+editor/display_folded = true
+margin_top = 275.0
+margin_right = 426.0
+margin_bottom = 295.0
+
+[node name="Back_btn" type="Button" parent="Control/MarginContainer/CenterContainer/VBoxContainer/Back"]
+margin_right = 42.0
+margin_bottom = 20.0
+text = "Back"
+
+[node name="Battle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 322.585, 204.819 )
+
+[connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Atack_btn" to="." method="_on_Atack_btn_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/CenterContainer/VBoxContainer/Back/Back_btn" to="." method="_on_Back_btn_pressed"]
