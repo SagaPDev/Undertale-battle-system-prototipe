@@ -2,7 +2,7 @@ extends CanvasLayer
 
 #Flags
 
-#items list flag
+#items list
 
 export (bool) var knive_carry = false
 export (int) var knive_ATK = 30
@@ -26,25 +26,16 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_Atack_btn_pressed():
-	
-	
-
-	
-	get_node("MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons").visible = false
+func _on_Atack_btn_pressed():	
+	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons".visible = false
 	
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Atack_btn".disabled = true
-	
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Utilities_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Enchant_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Health_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Flee_btn".disabled = false
 	
 	if gun_carry == true:
-		
 		$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands/Gun".visible = true
 		$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands/Gun".disabled = false
 		
@@ -57,15 +48,10 @@ func _on_Back_btn_pressed():
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons".visible = true
 	
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Atack_btn".disabled = false
-	
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Utilities_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Enchant_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Health_btn".disabled = false
-
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Main Buttons/Flee_btn".disabled = false
-	
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands/Gun".visible = false
 	$"MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu/Atack_comands/Gun".disabled = true
 	

@@ -24,6 +24,7 @@ margin_left = 107.0
 margin_top = 32.0
 margin_right = 533.0
 margin_bottom = 327.0
+rect_min_size = Vector2( 426, 295 )
 custom_constants/separation = 12
 alignment = 1
 
@@ -85,6 +86,7 @@ editor/display_folded = true
 margin_top = 199.0
 margin_right = 426.0
 margin_bottom = 219.0
+rect_min_size = Vector2( 426, 20 )
 custom_constants/separation = -20
 
 [node name="Atack_comands" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer/VBoxContainer/Menu"]
@@ -143,6 +145,7 @@ margin_bottom = 20.0
 text = "Flee"
 
 [node name="Back" type="HBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+editor/display_folded = true
 margin_top = 275.0
 margin_right = 426.0
 margin_bottom = 295.0
